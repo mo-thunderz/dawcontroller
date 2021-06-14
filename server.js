@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 // start server
 server.listen(3000, () => {
-  console.log('listening on *:3000');
+  console.log('navigate to http://localhost:3000/ or <ip_address>:3000');
 });
 
 //----------------------------------setup MIDI INPUT----------------------------------------
