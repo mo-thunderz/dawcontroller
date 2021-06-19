@@ -17,35 +17,36 @@ var rec = document.getElementById('rec');
 play.addEventListener('click', function(e) {
 	e.preventDefault();
 	console.log("play");
-	socket.emit('midi', MidiToInt([144, 94, 1]));
+	socket.emit('midi', MidiToInt([144, 94, 127]));
 });
 
 stop.addEventListener('click', function(e) {
 	e.preventDefault();
 	console.log("stop");
-	socket.emit('midi', MidiToInt([144, 93, 1]));
+	socket.emit('midi', MidiToInt([144, 93, 127]));
 });
 
 rec.addEventListener('click', function(e) {
 	e.preventDefault();
 	console.log("rec");
-	var rec = 1 - document.getElementById("rec").value;
-	document.getElementById("rec").value = rec;
-	socket.emit('midi', MidiToInt([144, 95, rec]));
+	socket.emit('midi', MidiToInt([144, 95, 127]));
 });
 
 // receive messages from server
 socket.on('midi', function(midi_int) {
 	var message = IntToMidi(midi_int)
-	console.log(IntToMidi(midi_int));
+	// console.log(IntToMidi(midi_int));										// enable this statement to see all MIDI messages from DAW (select F12 in browser)
 	if (message[0] == 144 && message[1] == 95) {								// rec button
 		SwitchPic('rec', rec_src[Math.round(message[2]/127)]);
+		console.log(IntToMidi(midi_int));
 	}	
 	else if (message[0] == 144 && message[1] == 93) {							// stop button
 		SwitchPic('stop', stop_src[Math.round(message[2]/127)]);
+		console.log(IntToMidi(midi_int));
 	}
 	else if (message[0] == 144 && message[1] == 94) {							// play button
 		SwitchPic('play', play_src[Math.round(message[2]/127)]);
+		console.log(IntToMidi(midi_int));
 	}	
 });
 
