@@ -6,8 +6,9 @@ This program is a universal controller for any DAW that supports the Mackie Prot
 * download this program (dawcontroller), unzip and open command prompt to the root folder (folder that includes server.js)
 * install express by typing: npm install express
 * install web sockets by typing: npm install socket.io
-* install MIDI by typing: npm install midi (NOTE, you MUST have virtual C and python 3.x installed first)
-* * test
+* install MIDI by typing: npm install midi (NOTE, you MUST have "visual C - Desktop Development with C++" and "python 3.x" installed first)
+* * Visual C: https://visualstudio.microsoft.com/vs/express/ -> install "visual studio Community" -> run and install Desktop Development with C++
+* * Install Python 3.x from the Windows app store (free) or by going to https://www.python.org/ -> make sure that Python is added to the PATH
 
 The program requires two virtual MIDI ports. These can be realized with a simple program called loopMIDI
 * install loopMIDI: https://www.tobias-erichsen.de/software/loopmidi.html
