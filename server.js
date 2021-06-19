@@ -41,7 +41,7 @@ for (let i = 0; i < input.getPortCount(); i++) {
 		input.ignoreTypes(false, false, false);			// filter for (Sysex, Timing, Active Sensing) -> set false to receive message
 		connected = true;
 		if (debug) 
-			console.log("INPUT: " + input.getPortName(i));
+			console.log("DAW output name: " + input.getPortName(i));
 	}
 }
 if (connected == false)
@@ -60,7 +60,7 @@ for (let i = 0; i < output.getPortCount(); i++) {
 		output.openPort(i);
 		connected = true;
 		if (debug) 
-			console.log("OUTPUT: " + output.getPortName(i));
+			console.log("DAW input name: " + output.getPortName(i));
 	}
 }
 if (connected == false)
