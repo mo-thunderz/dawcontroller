@@ -7,6 +7,7 @@ This program is a universal controller for any DAW that supports the Mackie Prot
 * install express by typing: npm install express
 * install web sockets by typing: npm install socket.io
 * install MIDI by typing: npm install midi (NOTE, you MUST have virtual C and python 3.x installed first)
+* * test
 
 The program requires two virtual MIDI ports. These can be realized with a simple program called loopMIDI
 * install loopMIDI: https://www.tobias-erichsen.de/software/loopmidi.html
