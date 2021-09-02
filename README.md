@@ -1,7 +1,7 @@
 # Universal DAW controller
 This program is a universal controller for any DAW that supports the Mackie Protocol (Steinberg Cubase, Sonar Cakewalk, Ableton, Reaper, etc). The DAW controller is a small WEB server that provides DAW controls in a standard browser (Chrome preferred) on any device within the same network. The program is based on javascript (nodejs) and runs on the same machine where the DAW is installed.  
 
-# Youtube
+# Explanation on Youtube
 https://youtu.be/J5nWvlynKTM
 
 # Installation procedure
